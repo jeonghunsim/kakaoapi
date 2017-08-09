@@ -10,6 +10,16 @@ init_message_text.Type = () => {
          }
 };
 
+var test_message = function(){
+	
+	var text = {			
+			text : "Hello"			
+	};
+	
+	return text;
+	
+}
+
 exports.contents_input = function(res,t_user,type,content){
 
 	// t_user : 착신자
@@ -19,7 +29,7 @@ exports.contents_input = function(res,t_user,type,content){
 	//text 형태 활성화	
 	res.set({
 		'content-type' : 'application/json'
-		}).send(JSON.stringify(init_message_text.Type()));
+		}).send(JSON.stringify(test_message()));
 		//.send(JSON.stringify(init_message_button.buttonsType())); --> button Key Type
 		
 		//log.L('Text_Mode Activate...',filename,59);		
