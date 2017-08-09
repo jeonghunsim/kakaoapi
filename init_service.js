@@ -25,8 +25,31 @@ app.lissten(app.get('port'), function(){
 	
 });
 
+let init_message_button = {};
+let init_message_text = {};
+
+init_message_button.buttons = ['A','B','C',];
+init_message_button.buttonsType = () => {
+         return {
+          type: 'buttons',
+          buttons: message.buttons
+         }
+};
+
+
+init_message_text.Type = () => {
+         return {
+          type: 'text'          
+         }
+};
+
+
 app.get('/keyboard',function(req,rew){
 	
+	res.set({
+	'content-type' : 'application/json'
+	}).send(JSON.stringify(init_message_text.Type()));
+	//.send(JSON.stringify(init_message_button.buttonsType())); --> button Key Type
 	
 });
 
