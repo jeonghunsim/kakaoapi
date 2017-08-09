@@ -2,29 +2,8 @@
  * Language Processing Part
  * 
  */
-
 var resp = require('./response.js');
-
-let init_message_text = {};
-init_message_text.Type = () => {
-         return {
-          type: 'text'          
-         }
-};
-
-var test_message = function(){
-	
-	var text = {	
-		message :{
-			text : "Hello"
-	    },
-	    keyboard :{
-	    	type : "text"
-	    }
-	};	
-	return text;
-}
-
+var message = require('./message.js');
 
 exports.contents_input = function(res,t_user,type,content){
 
@@ -33,8 +12,8 @@ exports.contents_input = function(res,t_user,type,content){
 	// type : text or photo
 	
 	//text 형태 활성화	
-		
-	resp.response(res,test_message());			
+	var text = message.text_message("hello",0);
+	resp.response(res,text);			
 }
 
 

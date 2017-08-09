@@ -64,13 +64,13 @@ app.post('/message', function(req, res){ //message input
 
 	log.L('Message Listen',filename,65);
 	var data = req.body;
-	log.L('Data : ' + data ,filename,65);
+	//log.L('Data : ' + data ,filename,65);
 	var t_user_key = data.user_key; //" 착신 가입자(메시지 발신자) user key "
 	var type = data.type;           //" text, photo "
 	var content = data.content;     //" 자동 응답 명령어의 메시지 텍스트 혹은 미디어 파일 URI"
 	
 	log.L('res content',filename,65);
-	log.L('Data : ' + res ,filename,65);
+	//log.L('Data : ' + res ,filename,65);
 	
 	// Message 처리에 대한 내용을 이후에 작성 
 	language_understanding.contents_input(res,t_user_key,type,content);	
