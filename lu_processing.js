@@ -12,7 +12,7 @@ exports.contents_input = function(res,t_user,type,content){
 	// type : text or photo
 	
 	//text 형태 활성화	
-	var text = message.text_message("hello",0);
+	var text = message.text_message("hello");
 	resp.response(res,text);			
 }
 
