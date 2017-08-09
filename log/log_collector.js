@@ -3,7 +3,7 @@
  */
 
 var fs = require('fs');
-var path = "../app/log/logfile.log";
+var path = "./app/log/logfile.log";
 var gLog = require("./log.js");
 
 exports.write_file = function(text){
