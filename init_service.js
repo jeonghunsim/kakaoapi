@@ -44,7 +44,7 @@ init_message_text.Type = () => {
 };
 
 
-app.get('/keyboard',function(req,rew){
+app.get('/keyboard',function(req,res){
 	
 	res.set({
 	'content-type' : 'application/json'
