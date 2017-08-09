@@ -73,7 +73,7 @@ app.post('/message', function(req, res){ //message input
 	log.L('Data : ' + res ,filename,65);
 	
 	// Message 처리에 대한 내용을 이후에 작성 
-	language_understanding.contets_input(t_user_key,type,content);	
+	language_understanding.contents_input(t_user_key,type,content);	
 	
 	
 });
