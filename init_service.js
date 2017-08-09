@@ -60,7 +60,7 @@ app.get('/keyboard',function(req,res){
 	log.L('Text_Mode Activate...',filename,59);
 });
 
-app.get('/message', function(req, res){ //message input
+app.post('/message', function(req, res){ //message input
 
 	log.L('Message Listen',filename,65);
 	var data = req.body;
@@ -70,5 +70,7 @@ app.get('/message', function(req, res){ //message input
 	var content = data.content;     //" 자동 응답 명령어의 메시지 텍스트 혹은 미디어 파일 URI"
 	
 	// Message 처리에 대한 내용을 이후에 작성 
+	language_understanding.contets_input(t_user_key,type,content);
+	res.sendStatus(200);
 	
 });

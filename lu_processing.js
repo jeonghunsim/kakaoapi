@@ -3,7 +3,7 @@
  * 
  */
 
-var contents_input = function(t_user,type,content){
+exports.contents_input = function(t_user,type,content){
 
 	// t_user : 착신자
 	// content : content 유형
