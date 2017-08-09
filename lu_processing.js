@@ -17,7 +17,7 @@ var test_message = function(){
 			text : "Hello"
 	    },
 	    keyboard :{
-	    	text : "text"
+	    	type : "text"
 	    }
 	};
 	
