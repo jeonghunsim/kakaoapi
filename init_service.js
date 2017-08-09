@@ -21,7 +21,7 @@ var app = express();
 	app.use(bodyParser.json());
 	app.use(express.static('public'));
 
-app.lissten(app.get('port'), function(){
+app.listen(app.get('port'), function(){
 	
 });
 
