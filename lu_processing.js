@@ -3,6 +3,8 @@
  * 
  */
 
+var resp = require('./response.js');
+
 let init_message_text = {};
 init_message_text.Type = () => {
          return {
@@ -19,11 +21,10 @@ var test_message = function(){
 	    keyboard :{
 	    	type : "text"
 	    }
-	};
-	
+	};	
 	return text;
-	
 }
+
 
 exports.contents_input = function(res,t_user,type,content){
 
@@ -32,12 +33,8 @@ exports.contents_input = function(res,t_user,type,content){
 	// type : text or photo
 	
 	//text 형태 활성화	
-	res.set({
-		'content-type' : 'application/json'
-		}).send(JSON.stringify(test_message()));
-		//.send(JSON.stringify(init_message_button.buttonsType())); --> button Key Type
 		
-		//log.L('Text_Mode Activate...',filename,59);		
+	resp.response(res,test_message());			
 }
 
 
