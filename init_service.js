@@ -12,7 +12,7 @@ var bodyParser = require('body-parser');
 var https = require('https');
 
 //Config
-var LISTEN_PORT = '9999' // PORT SETTING
+var LISTEN_PORT = '7777' // PORT SETTING
 
 //express object	
 var app = express();
