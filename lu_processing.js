@@ -12,8 +12,13 @@ init_message_text.Type = () => {
 
 var test_message = function(){
 	
-	var text = {			
-			text : "Hello"			
+	var text = {	
+		message :{
+			text : "Hello"
+	    },
+	    keyboard :{
+	    	text : "text"
+	    }
 	};
 	
 	return text;
